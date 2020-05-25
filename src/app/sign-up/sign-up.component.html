@@ -1,0 +1,27 @@
+  <form
+    #signupForm="ngForm"
+    (ngSubmit)="signup(signupForm.value)"
+    class="signup-form"
+  >
+    <mat-form-field class="email-width">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        ngModel name="email"
+        class="form-control"
+        matInput
+        placeholder="半角英数字4字"
+      />
+    </mat-form-field>
+    <mat-form-field class="pass-width">
+      <mat-label>Pass</mat-label>
+      <textarea
+        type="password"
+        ngModel name="password"
+        class="form-control"
+        matInput
+        placeholder="半角英数字6字以上"
+      ></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit">Signup</button>
+  </form>

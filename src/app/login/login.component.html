@@ -1,0 +1,52 @@
+<mat-toolbar>
+  <ng-container *ngIf="selectForm">
+    <label>Login</label>
+    <span class="spacer"></span>
+  </ng-container>
+  <ng-container *ngIf="!selectForm">
+    <label>SignUp</label>
+    <span class="spacer"></span>
+  </ng-container>
+</mat-toolbar>
+
+<div class="login">
+  <h2 routerLink="" class="login-label" (click)="changeLoginForm()">Login</h2>
+  <h2 routerLink="" class="signup-label" (click)="changeSignupForm()">SignUp</h2>
+
+  <ng-container *ngIf="selectForm">
+    <form
+      #loginForm="ngForm"
+      (ngSubmit)="login(loginForm.value)"
+      class="login-form"
+    >
+      <mat-form-field class="email-width">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          ngModel
+          name="email"
+          class="form-control"
+          matInput
+          placeholder="半角英数字4字"
+        />
+      </mat-form-field>
+      <mat-form-field class="pass-width">
+        <mat-label>Pass</mat-label>
+        <textarea
+          type="password"
+          ngModel
+          name="password"
+          class="form-control"
+          matInput
+          placeholder="半角英数字6字以上"
+        ></textarea>
+      </mat-form-field>
+      <button mat-raised-button type="submit">Login</button>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="!selectForm">
+    <app-sign-up></app-sign-up>
+  </ng-container>
+  </div>
+
+

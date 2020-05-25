@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-app-c2794": {
+      "hosting": {
+        "login-app": [
+          "login-app-c2794"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.signup-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+  margin: auto;
+  padding-top: 10%;
+}
+.login-label {
+  border-bottom: 2px solid #1161ed;
+}
+.sigunup-label {
+  color: rgba(255, 255, 255, 0.2);
+}
+h2 {
+  padding-left: 12px;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 100;
+}
+h2:first-child {
+  padding-left: 0px;
+}
+.email-width {
+  width: 100%;
+}
+.pass-width {
+  width: 100%;
+}
