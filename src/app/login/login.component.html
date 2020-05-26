@@ -16,27 +16,23 @@
   <ng-container *ngIf="selectForm">
     <form
       #loginForm="ngForm"
-      (ngSubmit)="login(loginForm.value)"
+      (ngSubmit)="login(loginForm)"
       class="login-form"
     >
       <mat-form-field class="email-width">
         <mat-label>Email</mat-label>
         <input
           type="email"
-          ngModel
-          name="email"
-          class="form-control"
+          ngModel name="email"
           matInput
-          placeholder="半角英数字4字"
+          placeholder="半角英数字4文字"
         />
       </mat-form-field>
       <mat-form-field class="pass-width">
         <mat-label>Pass</mat-label>
         <textarea
           type="password"
-          ngModel
-          name="password"
-          class="form-control"
+          ngModel name="password"
           matInput
           placeholder="半角英数字6字以上"
         ></textarea>

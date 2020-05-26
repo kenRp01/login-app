@@ -1,6 +1,6 @@
   <form
     #signupForm="ngForm"
-    (ngSubmit)="signup(signupForm.value)"
+    (ngSubmit)="signup(signupForm)"
     class="signup-form"
   >
     <mat-form-field class="email-width">
@@ -8,7 +8,6 @@
       <input
         type="email"
         ngModel name="email"
-        class="form-control"
         matInput
         placeholder="半角英数字4字"
       />
@@ -18,7 +17,6 @@
       <textarea
         type="password"
         ngModel name="password"
-        class="form-control"
         matInput
         placeholder="半角英数字6字以上"
       ></textarea>

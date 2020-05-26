@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  user$ = this.authService.user$;
 
   selectForm: boolean;
   constructor(private authService: AuthService) { }

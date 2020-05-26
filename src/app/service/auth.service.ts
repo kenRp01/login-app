@@ -2,20 +2,18 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 import { User } from 'src/app/class/user';
-import { Observable } from 'rxjs';
 import * as firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  userData: Observable<firebase.User>;
+  user$ = this.afAuth.user;
 
   constructor(
     private router: Router,
     private afAuth: AngularFireAuth,
     ) {
-      this.userData = afAuth.authState;
     }
 
     signUp(email: string, password: string) {
@@ -32,9 +30,10 @@ export class AuthService {
   login(email: string, password: string): void {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then(user => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home', user]);
         console.log(user);
       });
+      this.router.navigate(['/home']);
   }
   logout(): void {
     this.afAuth.auth.signOut()
