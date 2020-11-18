@@ -3,11 +3,11 @@ Angularの使い方を簡単に説明した記事を書くために作成した�
 https://qiita.com/yqxxnaxr1109/items/bc42fa1cdc766b75f842
 下記記事を参考にすることで、Angular+Firebaseの簡易的なログインフォームを作成できるようになることを目標とします。
 
-記事で学べること
-Angularプロジェクトの構成、作成、実装方法
-TypeScriptの記述
-Firebaseを用いたDB操作
-AngularMaterialを利用したUIの作成
+記事で学べること  
+Angularプロジェクトの構成、作成、実装方法  
+TypeScriptの記述  
+Firebaseを用いたDB操作  
+AngularMaterialを利用したUIの作成  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
